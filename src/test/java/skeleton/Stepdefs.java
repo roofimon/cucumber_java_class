@@ -16,12 +16,12 @@ public class Stepdefs {
     }
 
     @When("^I count (\\d+)$")
-    public void i_count(int arg1) throws Throwable {
-        this.actual = fizzbuzz.count(arg1);
+    public void i_count(int value) throws Throwable {
+        this.actual = fizzbuzz.count(value);
     }
 
     @Then("^I got in \"(.*?)\"$")
-    public void i_got_in(String arg1) throws Throwable {
-        assertEquals(arg1, actual);
+    public void i_got_in(String expected) throws Throwable {
+        assertEquals(expected, actual);
     }
 }
